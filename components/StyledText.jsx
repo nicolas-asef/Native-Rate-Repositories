@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     },
     textAlignCenter:{
         textAlign: 'center'
-    }
+    },
 })
 
 export default function StyledText({children, color, fontSize, fontWeight, align, style, ...restOfProps}){
@@ -33,7 +33,8 @@ export default function StyledText({children, color, fontSize, fontWeight, align
         color === 'secondary' && styles.colorSecondary,
         fontSize === 'subheading' && styles.subheading,
         fontWeight === 'bold' && styles.bold,
-        align === 'center' && styles.textAlignCenter
+        align === 'center' && styles.textAlignCenter,
+        style
     ] 
     
     return (

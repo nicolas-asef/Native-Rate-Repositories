@@ -12,20 +12,20 @@ const RepositoryStats = props => {
     return(
         <View style={{flexDirection: 'row', justifyContent:'space-around'}}>
             <View>
-                <StyledText fontWeight='bold' color='primary'>Stars</StyledText>
                 <StyledText align='center'>{parseThousand(props.stargazersCount)}</StyledText>
+                <StyledText fontWeight='bold' color='primary'>Stars</StyledText>
             </View>
             <View>
-                <StyledText fontWeight='bold' color='primary'>Forks</StyledText>
                 <StyledText align='center'>{parseThousand(props.forksCount)}</StyledText>
+                <StyledText fontWeight='bold' color='primary'>Forks</StyledText>
             </View>
             <View>
-                <StyledText fontWeight='bold' color='primary'>Reviews</StyledText>
                 <StyledText align='center'>{props.reviewCount}</StyledText>
+                <StyledText fontWeight='bold' color='primary'>Reviews</StyledText>
             </View>
             <View>
-                <StyledText fontWeight='bold' color='primary'>Rating</StyledText>
                 <StyledText align='center'>{props.ratingAverage}</StyledText>
+                <StyledText fontWeight='bold' color='primary'>Rating</StyledText>
             </View>
         </View>
     )
