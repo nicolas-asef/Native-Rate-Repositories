@@ -7,7 +7,9 @@ import theme from "./theme"
 export default function RepositoryItemHeader({ ownerAvatarUrl, fullName, description, language}){
     return (
         <View style={{flexDirection:'row', paddingBottom:5}}>
-            <Image style={style.image} source={{uri:ownerAvatarUrl}}/> 
+            <View style={{justifyContent:'center'}}>
+                <Image style={style.image} source={{uri:ownerAvatarUrl}}/> 
+            </View>
             <View style={{flex:1 ,paddingLeft:10}}>
                 <StyledText fontWeight='bold'>Name: {fullName}</StyledText>
                 <StyledText color='secondary'>Description: {description}</StyledText>
