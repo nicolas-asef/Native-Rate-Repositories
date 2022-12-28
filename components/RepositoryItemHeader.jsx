@@ -1,5 +1,5 @@
 import React from "react"
-import { View, Image } from "react-native"
+import { View, Image, Platform } from "react-native"
 import { StyleSheet } from "react-native"
 import StyledText from "./StyledText"
 import theme from "./theme"
@@ -23,7 +23,11 @@ const style = StyleSheet.create({
     language:{
         padding:4,
         color: theme.colors.white,
-        backgroundColor: theme.colors.primary,
+        backgroundColor: Platform.select({
+            ios:theme.colors.primary,
+            android:'red',
+            default: 'orange'
+        }), //ESTO ES PARA SELECCIONAR COMO SE VE SEGUN EL SISTEMA OPERATIVO
         alignSelf:'flex-start',
         borderRadius:4, //EN MUCHOS CASOS PARA QUE APAREZCA EL BORDER RADIUS ES NECES. PONER EL OVERFLOW HIDDEN
         overflow:'hidden' //EN MUCHOS CASOS PARA QUE APAREZCA EL BORDER RADIUS ES NECES. PONER EL OVERFLOW HIDDEN
